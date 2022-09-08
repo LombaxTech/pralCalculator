@@ -36,7 +36,7 @@ export default function Home() {
     // <div className="min-h-screen bg-gray-200 p-4 flex">
     // <div className="bg-white rounded-md shadow-md flex-1 flex flex-col items-center">
     <div className="min-h-screen p-8 flex flex-col items-center bg-gray-200">
-      <div class="bg-gray-500 p-8 flex flex-col gap-6 items-center text-white font-medium rounded-md shadow-2xl">
+      <div className="bg-gray-500 p-8 flex flex-col gap-6 items-center text-white font-medium rounded-md shadow-2xl">
         <table className="table-auto">
           <tbody>
             <tr className="">
