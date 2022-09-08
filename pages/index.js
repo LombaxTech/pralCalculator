@@ -20,6 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     let pral = calculatePral(protein, p, k, mg, ca);
+    pral = pral.toFixed(3);
     setPral(pral);
   }, [protein, p, k, mg, ca]);
 
@@ -34,64 +35,66 @@ export default function Home() {
   return (
     // <div className="min-h-screen bg-gray-200 p-4 flex">
     // <div className="bg-white rounded-md shadow-md flex-1 flex flex-col items-center">
-    <div className="min-h-screen p-8 flex flex-col items-center">
-      <table className="table-auto ">
-        <tbody>
-          <tr className="">
-            <td className="">Protein (g)</td>
-            <td>
-              <NumberInput value={protein} onChange={(n) => setProtein(n)}>
-                <NumberInputField />
-                <NumberInputStepper>
-                  <NumberIncrementStepper />
-                  <NumberDecrementStepper />
-                </NumberInputStepper>
-              </NumberInput>
-            </td>
-          </tr>
-          <tr className="">
-            <td className="">Potassium (mg)</td>
-            <td>
-              <NumberInput value={k} onChange={(n) => setK(n)}>
-                <NumberInputField />
-                <NumberInputStepper>
-                  <NumberIncrementStepper />
-                  <NumberDecrementStepper />
-                </NumberInputStepper>
-              </NumberInput>
-            </td>
-          </tr>
-          <tr className="">
-            <td>Magnesium (mg)</td>
-            <td>
-              <NumberInput value={mg} onChange={(n) => setMg(n)}>
-                <NumberInputField />
-                <NumberInputStepper>
-                  <NumberIncrementStepper />
-                  <NumberDecrementStepper />
-                </NumberInputStepper>
-              </NumberInput>
-            </td>
-          </tr>
-          <tr className="">
-            <td>Calcium (mg)</td>
-            <td>
-              <NumberInput value={ca} onChange={(n) => setCa(n)}>
-                <NumberInputField />
-                <NumberInputStepper>
-                  <NumberIncrementStepper />
-                  <NumberDecrementStepper />
-                </NumberInputStepper>
-              </NumberInput>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button className="btn btn-warning mt-4" onClick={clearValues}>
-        Clear values
-      </button>
-      {/* pral */}
-      <h1 className="font-bold text-3xl mt-8">PRAL: {pral}</h1>
+    <div className="min-h-screen p-8 flex flex-col items-center bg-gray-200">
+      <div class="bg-gray-500 p-8 flex flex-col gap-6 items-center text-white font-medium rounded-md shadow-2xl">
+        <table className="table-auto">
+          <tbody>
+            <tr className="">
+              <td className="">Protein (g)</td>
+              <td>
+                <NumberInput value={protein} onChange={(n) => setProtein(n)}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
+              </td>
+            </tr>
+            <tr className="">
+              <td className="">Potassium (mg)</td>
+              <td>
+                <NumberInput value={k} onChange={(n) => setK(n)}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
+              </td>
+            </tr>
+            <tr className="">
+              <td>Magnesium (mg)</td>
+              <td>
+                <NumberInput value={mg} onChange={(n) => setMg(n)}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
+              </td>
+            </tr>
+            <tr className="">
+              <td>Calcium (mg)</td>
+              <td>
+                <NumberInput value={ca} onChange={(n) => setCa(n)}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button className="btn btn-warning" onClick={clearValues}>
+          Clear values
+        </button>
+        {/* pral */}
+        <h1 className="font-bold text-3xl">PRAL: {pral}</h1>
+      </div>
     </div>
     // </div>
   );
