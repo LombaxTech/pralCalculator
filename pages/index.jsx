@@ -52,6 +52,18 @@ export default function Home() {
               </td>
             </tr>
             <tr className="">
+              <td className="">Phosphorus (mg)</td>
+              <td>
+                <NumberInput value={p} onChange={(n) => setP(n)}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
+              </td>
+            </tr>
+            <tr className="">
               <td className="">Potassium (mg)</td>
               <td>
                 <NumberInput value={k} onChange={(n) => setK(n)}>
